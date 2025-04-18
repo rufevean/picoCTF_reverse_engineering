@@ -71,4 +71,33 @@ Using grep to find the flag in the file worked.
 `cat SafeOpener.class | grep -oaE "picoCTF\{[^}]*\}"`
 ***Flag** : picoCTF{SAf3_0p3n3rr_y0u_solv3d_it_0e57c117}
 
---- 
+---
+
+### Name :- GDB Test Drive
+
+#### Difficulty - Easy (Classified as Medium)
+Follow the instructions given in the description.
+
+**Flag** :  picoCTF{d3bugg3r_dr1v3_197c378a}
+
+
+---
+
+### Name :- unpackme
+
+#### Description :- Can you get the flag? Reverse engineer this binary.
+#### Difficulty - High Medium
+
+For this , We first unpack the binary using upx tool and then use Ghidra to analyze the logic of the main function.
+We can see its a if statement which results in the flag when executed with the correct number which can be seen in the code. using that number and executing that binary will result in the flag.
+
+**Flag** : picoCTF{up><_m3_f7w_e510a27f}
+
+---
+### Name :- bbbbloat
+
+#### Description :-  Can you get the flag? Reverse engineer this binary.
+#### Difficulty - Easy 
+Same as the previous case, analyzing the functions on ghidra reaveals the number and using that number we can retrieve the flag.
+
+**Flag** : picoCTF{cu7_7h3_bl047_695036e3}
