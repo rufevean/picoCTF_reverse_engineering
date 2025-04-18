@@ -97,7 +97,43 @@ We can see its a if statement which results in the flag when executed with the c
 ### Name :- bbbbloat
 
 #### Description :-  Can you get the flag? Reverse engineer this binary.
-#### Difficulty - Easy 
+#### Difficulty - Easy(Classified as Medium) 
 Same as the previous case, analyzing the functions on ghidra reaveals the number and using that number we can retrieve the flag.
 
 **Flag** : picoCTF{cu7_7h3_bl047_695036e3}
+
+---
+### Name :- ARMssembly 0
+
+#### Description :- What integer does this program print with arguments 4134207980 and 950176538? File: chall.S Flag format: picoCTF{XXXXXXXX} -> (hex, lowercase, no 0x, and 32 bits. ex. 5614267 would be picoCTF{0055aabb})
+#### Difficulty - Medium
+
+Analyzing the func1, it returns the greater number, so converting the greater number into hex and formatting it to the correct flag format solves the question .
+
+**Flag** : picoCTF{f66b01ec}
+
+---
+### Name :- Ready Gladiator 0
+
+#### Description :- Can you make a CoreWars warrior that always loses, no ties? Your opponent is the Imp. The source is available here. If you wanted to pit the Imp against himself, you could download the Imp and connect to the CoreWars server like this: nc saturn.picoctf.net 55249 < imp.red
+
+#### Difficulty - Upperend of easy (Classified as Medium)
+
+imp ex is a core war warrior that does nothing using mov 0 0 it copies itself to the same spot forever never moves never attacks always loses every single match guaranteed
+
+
+**Flag** : picocTF{h3r0_t0_z3r0_4m1r1gh7_e476d4cf}
+
+---
+
+### Name :- vault-door-3
+
+#### Description :-  This vault uses for-loops and byte arrays. The source code for this vault is here: VaultDoor3.java
+
+#### Difficulty - Meidum 
+
+looking at the file, we can edit the code by trying to creating a new variable which satisfies every if statement in printing the required buffer and that buffer is the flag.
+
+**Flag** : picoCTF{jU5t_a_s1mpl3_an4gr4m_4_u_c79a21}
+
+--- 
