@@ -229,4 +229,37 @@ Adjusting the code to print the required license key , you can do it by altering
 **Flag** :- picoCTF{1n_7h3_|<3y_of_54ef6292}
 
 
+---
+### Name :-  Picker II
+
+#### Description :- Can you figure out how this program works to get the flag? Connect to the program with netcat: $ nc saturn.picoctf.net 54332 The program's source code can be downloaded here.
+#### Difficulty :- Medium
+
+As win string is filtered from getting called, we can use ascii chars and call the function. using the following input
+`globals()[''.join(map(chr,[119,105,110]))]` to get the flag .
+
+**Flag** :-  picoCTF{f1l73r5_f41l_c0d3_r3f4c70r_m1gh7_5ucc33d_95d44590}
+
+---
+
+### Name :- Fresh Java
+
+#### Description :- Can you get the flag? Reverse engineer this Java program.
+#### Difficulty :- Easy (Classified as Medium)
+
+Using ghidra, you can decompile the file and see that there is a if block checking the key indexes, you can form the flag by combining those if check statements.
+
+**Flag** :-  picoCTF{700l1ng_r3qu1r3d_738cac89}
+
+---
+
+### Name :- bloat.py
+
+#### Description :- Can you get the flag? Run this Python program in the same directory as this encrypted flag.
+#### Difficulty :- Medium
+
+Analyzing the python code, you can see the required code to be `happychance` , its just pure bloated to make us confuse. 
+
+**Flag** :-  picoCTF{d30bfu5c4710n_f7w_b8062eec}
+
 --- 
