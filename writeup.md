@@ -136,4 +136,97 @@ looking at the file, we can edit the code by trying to creating a new variable w
 
 **Flag** : picoCTF{jU5t_a_s1mpl3_an4gr4m_4_u_c79a21}
 
+---
+### Name :-packer
+
+#### Description :-  Reverse this linux executable? binary 
+#### Difficulty :- Upperend of Easy (Classified as Medium)
+Unpacking the file using upx and analyzing it using ghidra will show this code block
+
+```
+  if (iVar3 == 0) {
+    *(undefined8 *)(puVar4 + -0x78) = 0x401f57;
+    puts(
+        "Password correct, please see flag: 7069636f4354467b5539585f556e5034636b314e365f42316e345269 33535f62646438343839337d"
+        );
+    *(undefined8 *)(puVar4 + -0x78) = 0x401f63;
+    puts(local_88);
+  }
+  else {
+    *(undefined8 *)(puVar4 + -0x78) = 0x401f71;
+    puts("Access denied");
+  }
+```
+converting that flag to ascii chars reveals the flag.
+
+**Flag** : picoCTF{U9X_UnP4ck1N6_B1n4Ri3S_bdd84893}
+
+
+---
+
+### Name :- Bit-O-Asm-1
+
+#### Description :- Can you figure out what is in the eax register? Put your answer in the picoCTF flag format: picoCTF{n} where n is the contents of the eax register in the decimal number base. If the answer was 0x11 your flag would be picoCTF{17}.
+#### Difficulty :- Easy (Classified as Medium)
+
+In the dumped code, eax register is being inserted by 0x30 which is 48 in decimal 
+
+**Flag** : picoCTF{48}
+
+---
+
+### Name :- Bit-O-Asm-2
+
+#### Description :- Can you figure out what is in the eax register? Put your answer in the picoCTF flag format: picoCTF{n} where n is the contents of the eax register in the decimal number base. If the answer was 0x11 your flag would be picoCTF{17}. Download the assembly dump here.
+#### Difficulty :- Easy (Classified as Medium)
+
+In the dumped code, `0x9f1a` which is hexadecimal of 654874 is getting moved into `DWORD PTR [rbp-0x4]` which itself is getting moved in register `eax`
+
+**Flag** : picoCTF{654874}
+
+---
+
+### Name :- Bit-O-Asm-3
+
+#### Description :- Can you figure out what is in the eax register? Put your answer in the picoCTF flag format: picoCTF{n} where n is the contents of the eax register in the decimal number base. If the answer was 0x11 your flag would be picoCTF{17}. Download the assembly dump here.
+#### Difficulty :- Easy(Classified as Medium)
+
+- `0x9fe1a` is getting moved to `DWORD PTR [rbp-0xc]`
+- `DWORD PTR [rbp-0xc]` is getting moved to `eax`
+
+so now eax := `0x9fe1a`
+
+now multiplication is performed on `eax` from `DWORD PTR [rbp-0x8]` which has a value of `0x4` 
+
+now eax:= 2619448
+
+adding `0x1f5` to eax will give the final `eax` value.which equals to 2619997
+
+**Flag** :- picoCTF{2619997}
+ 
+
+--- 
+
+### Name :-  Picker I
+
+#### Description :- This service can provide you with a random number, but can it do anything else? Connect to the program with netcat: $ nc saturn.picoctf.net 64700 The program's source code can be downloaded here.
+#### Difficulty :- Easy (Classified as Medium )
+
+Reverse Engineering the source code, we can see that it executes the function that matches our input string, so we can execute win and print the flag and then  convert it to ascii chars.
+
+**Flag** :- picoCTF{4_d14m0nd_1n_7h3_r0ugh_ce4b5d5b}
+
+---
+
+
+### Name :- keygenme-py
+
+#### Description :- keygenme-trial.py
+#### Difficulty - Easy (Classified as Medium) 
+
+Adjusting the code to print the required license key , you can do it by altering the check_key() function.
+
+**Flag** :- picoCTF{1n_7h3_|<3y_of_54ef6292}
+
+
 --- 
