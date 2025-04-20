@@ -262,4 +262,84 @@ Analyzing the python code, you can see the required code to be `happychance` , i
 
 **Flag** :-  picoCTF{d30bfu5c4710n_f7w_b8062eec}
 
+---
+
+### Name :- GDB baby step 1
+
+#### Description :- Can you figure out what is in the eax register at the end of the main function? Put your answer in the picoCTF flag format: picoCTF{n} where n is the contents of the eax register in the decimal number base. If the answer was 0x11 your flag would be picoCTF{17}. Disassemble this.
+#### Difficulty :- Easy (Classified as medium) 
+
+Opened the file using ghidra and the flag is getting returned by the main function in the decompiler
+
+Using gdb, you can disassemble main and analyze what value is being set to register `eax`. 
+
+**Flag** :- picoCTF{549698}
+
+---  
+### Name :- GDB baby step 2
+
+#### Description :- Can you figure out what is in the eax register at the end of the main function? Put your answer in the picoCTF flag format: picoCTF{n} where n is the contents of the eax register in the decimal number base. If the answer was 0x11 your flag would be picoCTF{17}. Debug this.
+
+Opened the file using ghidra and found the main funciton, run that function in a compiler to get the return value .
+
+**Flag** :- picoCTF{307019}
+
+
+---
+
+### Name :- timer
+
+#### Description :- You will find the flag after analysing this apk Download here.
+#### Difficulty :- Easy (Classified as Medium) 
+Using jadx-gui, analyze the apk and search for the flag using `picoCtf` .
+
+**Flag** :- picoCTF{t1m3r_r3v3rs3d_succ355fully_17496}
+
+---
+
+### Name :- vault-door-4
+
+#### Description :- This vault uses ASCII encoding for the password. The source code for this vault is here: VaultDoor4.java
+#### Difficulty :-  Easy (Classified as Medium)
+
+Open the java file and convert the text in different bases to ascii chars to get the flag.
+
+**Flag** :- picoCTF{jU5t_4_bUnCh_0f_bYt3s_8f4a6cbf3b}
+
+---
+
+### Name :- vault-door-5
+
+#### Description :- In the last challenge, you mastered octal (base 8), decimal (base 10), and hexadecimal (base 16) numbers, but this vault door uses a different change of base as well as URL encoding! The source code for this vault is here: VaultDoor5.java
+#### Difficulty :- Easy (Classified as Medium)
+
+
+It has two encodings, base64 and url encoding. use decoders for both and you get the flag. 
+
+**Flag** :- picoCTF{c0nv3rt1ng_fr0m_ba5e_64_84fd5095}
+
+---
+
+### Name :- vault-door-6
+
+#### Description :- This vault uses an XOR encryption scheme. The source code for this vault is here: VaultDoor6.java
+#### Difficulty :- Easy (Classified as Medium)
+
+It has xor encryption over hex encoding, and analyzing the source code, we can see that the xor value is `0x55`.
+
+
+**Flag** :- picoCTF{n0t_mUcH_h4rD3r_tH4n_x0r_3ce2919}
+
+---
+
+### Name :- Picker III
+
+#### Description :- Can you figure out how this program works to get the flag? Connect to the program with netcat: $ nc saturn.picoctf.net 51076 The program's source code can be downloaded here.
+
+#### Difficulty - Medium 
+
+Upon analyzing the source code, we can see that read_variable can return the function we want to, so i changed the read_variable varible to return win , and then we get a ascii values which we can convert to ascii chars
+ 
+**Flag** :-  picoCTF{7h15_15_wh47_w3_g37_w17h_u53r5_1n_ch4rg3_226dd285}
+
 --- 
