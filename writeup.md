@@ -343,3 +343,16 @@ Upon analyzing the source code, we can see that read_variable can return the fun
 **Flag** :-  picoCTF{7h15_15_wh47_w3_g37_w17h_u53r5_1n_ch4rg3_226dd285}
 
 --- 
+
+### Name :- Bit-O-Asm-4
+
+#### Description :- Can you figure out what is in the eax register? Put your answer in the picoCTF flag format: picoCTF{n} where n is the contents of the eax register in the decimal number base. If the answer was 0x11 your flag would be picoCTF{17}. Download the assembly dump here.
+#### Difficulty :- Medium
+
+
+Analyzed the assembly to trace the value assigned to eax. Based on conditional jumps and arithmetic operations, the final value was calculated as 654773
+
+**Flag** :- picoCTF{654773}
+
+
+--- 
