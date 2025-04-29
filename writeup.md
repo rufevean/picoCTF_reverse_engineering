@@ -356,3 +356,26 @@ Analyzed the assembly to trace the value assigned to eax. Based on conditional j
 
 
 --- 
+
+### Name :- GDB baby step 4
+
+#### Description :- main calls a function that multiplies eax by a constant. The flag for this challenge is that constant in decimal base. If the constant you find is 0x1000, the flag will be picoCTF{4096}.
+Debug this.
+
+Using gdb, we can see the asm code by 'layout asm' and observing through that we get the instruction we want to find. which is multiplying 0x3269 to `eax` register and that is the flag.
+
+**Flag** :- picoCTF{12905}
+
+---
+
+### Name :- ASCII FTW
+
+#### Description :- This program has constructed the flag using hex ascii values. Identify the flag text by disassembling the program.
+You can download the file from here.
+
+Running the program gives us a hint `The flag starts with 70`.We can Analyze the asm using ghidra and see a string of hexadecimals starting with 0x70 and then convert them to ascii to get the flag. 
+
+**Flag** :- picoCTF{ASCII_IS_EASY_7BCD971D}
+
+---
+
